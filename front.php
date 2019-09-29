@@ -7,7 +7,7 @@
 <div class="welcome-parallax will-parallax parallax-welcome b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-welcome.jpg">
 	<div class="welcome" id="skiptomaincontent">
 		<div class="welcome-cta">
-			<h2>San Diego Web Design</h2>
+			<h2>Beatiful Websites</h2>
 			<h3>Elegant, Goal Oriented, Mobile Responsive Design</h3>
 			<p>We help our clients design, build and maintain their websites.  We love and use WordPress and are experts in creating themes, and making your WordPress website work for you.</p>
 		</div>
@@ -16,66 +16,31 @@
 		</div>
 	</div>
 </div> 
-<!-- 
-<section id="aboutus" class="home-aboutus b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-about.jpg">
-	<h2><?php the_field('about_headline'); ?></h2>
-	<?php the_field('about_content'); ?>
-	<a href="<?php the_field('gallery_button'); ?>" rel="nofollow" class="button">View Our Patient Gallery</a>
-</section>
 
-<div class="home-doctor">
-	<div class="doc-image b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-doctor.jpg"></div>
-	<div class="doc-content"> 
-		<h2><?php the_field('doctor_headline'); ?></h2>
-		<?php the_field('doctor_cont'); ?>
-		<a href="<?php the_field('doctor_button'); ?>" rel="nofollow" class="button">Learn More</a>
+
+<div class="we-can-help">
+	<span class="the-headline">WE CAN HELP</span>
+	<p>Here are just a few ways we can help with your online presence</p>
+	<div class="the-boxes">
+		<div class="the-box">
+			<h2>WEBSITE DESIGN</h2>
+			<p>Goal-oriented, custom designed websites that look great on any device and are targeted on converting users into new customers.
+			</p>
+			<a class="button" href="<?php bloginfo('template_directory'); ?>" rel="nofollow">Read More</a>
+		</div>
+		<div class="the-box">
+			<h2>WORDPRESS WEB DEVELOPMENT</h2>
+			<p>WordPress is a powerful tool for publishing on the web. Trying to set up a WordPress website or need a shopping cart solution? We can help!
+			</p>
+			<a class="button" href="<?php bloginfo('template_directory'); ?>" rel="nofollow">Read More</a>
+		</div>
+		<div class="the-box">
+			<h2>WEBSITE MANAGEMENT</h2>
+			<p>You can call us anytime if your website goes offline and you need help. We can troubleshoot, set up hosting, perform maintenance.
+			</p>
+			<a class="button" href="<?php bloginfo('template_directory'); ?>" rel="nofollow">Read More</a>
+		</div>
 	</div>
-</div> -->
-<!-- 
-<div class="home-featured-procedures">
-	<div class="the-procedure b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-featured-1.jpg">
-		<h2>Breast</h2>
-		<?php if(have_rows('featured_breast')): ?>
-			<ul>
-				<?php while(have_rows('featured_breast')): the_row(); ?>
-					<li>
-						<a href="<?php the_sub_field('procedure_link'); ?>">
-							<?php the_sub_field('name'); ?>
-						</a>
-					</li>
-				<?php endwhile; ?>
-			</ul>
-		<?php endif; ?>
-	</div>
-	<div class="the-procedure b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-featured-2.jpg">
-		<h2>Body</h2>
-		<?php if(have_rows('featured_body')): ?>
-			<ul>
-				<?php while(have_rows('featured_body')): the_row(); ?>
-					<li>
-						<a href="<?php the_sub_field('procedure_link'); ?>">
-							<?php the_sub_field('name'); ?>
-						</a>
-					</li>
-				<?php endwhile; ?>
-			</ul>
-		<?php endif; ?>
-	</div>
-	<div class="the-procedure b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-featured-3.jpg">
-		<h2>Face</h2>
-		<?php if(have_rows('featured_face')): ?>
-			<ul>
-				<?php while(have_rows('featured_face')): the_row(); ?>
-					<li>
-						<a href="<?php the_sub_field('procedure_link'); ?>">
-							<?php the_sub_field('name'); ?>
-						</a>
-					</li>
-				<?php endwhile; ?>
-			</ul>
-		<?php endif; ?>
-	</div>	
-	<div class="the-overlay"></div>
-</div> -->
+</div>
 
 <?php get_footer()?>

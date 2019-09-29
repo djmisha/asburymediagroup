@@ -4095,10 +4095,10 @@ footer .seaforms_confirmation_message {
 }
 
 .seaforms .error {
-  border: 1px solid #09111b !important;
+  border: 1px solid #085f99 !important;
   outline: none !important;
-  -webkit-box-shadow: 0 0 10px #09111b !important;
-          box-shadow: 0 0 10px #09111b !important;
+  -webkit-box-shadow: 0 0 10px #085f99 !important;
+          box-shadow: 0 0 10px #085f99 !important;
   -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
           animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   -webkit-transform: translate3d(0, 0, 0);
@@ -4134,18 +4134,18 @@ footer .seaforms_confirmation_message {
 .seaforms .type-singlelinetext textarea,
 .seaforms .type-textarea input,
 .seaforms .type-textarea textarea {
-  background: #fff;
   width: 100%;
-  border: 1px solid white;
-  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.4);
   font-size: 16px;
   padding: 18px 20px;
+  color: #ffffff;
 }
 
 .seaforms .type-singlelinetext ::-webkit-input-placeholder,
 .seaforms .type-textarea ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
-  color: black;
+  color: rgba(255, 255, 255, 0.6);
   font-family: "Lato", sans-serif;
   font-weight: normal;
 }
@@ -4153,7 +4153,7 @@ footer .seaforms_confirmation_message {
 .seaforms .type-singlelinetext :-moz-placeholder,
 .seaforms .type-textarea :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: black;
+  color: rgba(255, 255, 255, 0.6);
   font-family: "Lato", sans-serif;
   font-weight: normal;
   opacity: 1;
@@ -4162,7 +4162,7 @@ footer .seaforms_confirmation_message {
 .seaforms .type-singlelinetext ::-moz-placeholder,
 .seaforms .type-textarea ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: black;
+  color: rgba(255, 255, 255, 0.6);
   font-family: "Lato", sans-serif;
   font-weight: normal;
   opacity: 1;
@@ -4171,7 +4171,7 @@ footer .seaforms_confirmation_message {
 .seaforms .type-singlelinetext :-ms-input-placeholder,
 .seaforms .type-textarea :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: black;
+  color: rgba(255, 255, 255, 0.6);
   font-family: "Lato", sans-serif;
   font-weight: normal;
 }
@@ -4525,8 +4525,8 @@ main,
   right: 0;
   height: 60px;
   background: #000000;
-  top: 60px;
-  left: -100%;
+  top: -60px;
+  left: 0;
   text-align: left;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -4538,7 +4538,7 @@ main,
 }
 
 .nav-bar-locations.locations-active {
-  left: 0;
+  top: 60px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -6090,6 +6090,7 @@ aside li {
   background-color: #000000;
   padding-top: 40px;
   padding-bottom: 40px;
+  position: relative;
 }
 
 @media only screen and (min-width: 768px) {
@@ -6106,6 +6107,7 @@ aside li {
 }
 
 .upper-footer .the-headline {
+  position: relative;
   color: #ffffff;
   font-family: "Playfair Display", serif;
   margin-bottom: 40px;
@@ -6115,6 +6117,17 @@ aside li {
   .upper-footer .the-headline {
     margin-bottom: 80px;
   }
+}
+
+.upper-footer .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .upper-footer form {
@@ -6151,6 +6164,11 @@ aside li {
   height: 120px;
 }
 
+.upper-footer form input,
+.upper-footer form textarea {
+  width: 100%;
+}
+
 .upper-footer form .robotic {
   position: absolute;
 }
@@ -6171,28 +6189,6 @@ aside li {
     padding-left: 180px;
     padding-right: 180px;
   }
-}
-
-.upper-footer .footer-or-call {
-  color: #ffffff;
-  font-size: 25px;
-}
-
-.upper-footer .footer-or-call i {
-  font-size: 50px;
-  margin-bottom: 40px;
-  margin-top: 60px;
-}
-
-.upper-footer .footer-or-call a {
-  font-size: 38px;
-  line-height: 55px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.upper-footer .footer-or-call a:nth-of-type(2) {
-  display: none;
 }
 
 /* FOOTER ADDRESSES */
@@ -6392,8 +6388,8 @@ aside li {
   }
 }
 
-.reviews_markup span {
-  color: #000000;
+.schema-markup {
+  margin-bottom: 20px;
 }
 
 .copyright,
@@ -6608,9 +6604,11 @@ aside li {
 
 .welcome {
   background: #fff url("images/bg-welcome.jpg") top center no-repeat;
-  background-size: cover;
+  background-size: 1400px auto;
+  background-position-x: -900px;
+  background-position-y: -260px;
   z-index: 1000;
-  height: 500px;
+  height: 667px;
   position: relative;
 }
 
@@ -6642,24 +6640,28 @@ aside li {
   color: #ffffff;
   background: rgba(0, 0, 0, 0.7);
   position: relative;
-  top: 100px;
-  max-width: 800px;
+  max-width: 600px;
   padding: 20px;
   margin-left: 20px;
   margin-right: 20px;
+  position: absolute;
+  bottom: 10px;
 }
 
 @media only screen and (min-width: 768px) {
   .welcome .welcome-cta {
+    top: 100px;
+    position: relative;
     margin: 0 auto;
     padding: 60px 40px;
+    margin-right: 40%;
     top: 200px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .welcome .welcome-cta {
-    top: 35vh;
+    top: 30vh;
   }
 }
 
@@ -6706,395 +6708,67 @@ aside li {
   color: #ffffff;
 }
 
-/*====================================
-=            home-aboutus            =
-====================================*/
-.home-aboutus {
-  background-repeat: no-repeat;
-  background-size: 300px auto;
-  background-position: center right;
-  overflow: hidden;
-  text-align: left;
-  padding-top: 40px;
-  padding-bottom: 40px;
+.we-can-help {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: #000000;
+  color: #ffffff;
+}
+
+.we-can-help .the-boxes {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
-  .home-aboutus {
-    background-position: bottom right;
-    background-position-y: bottom -90px;
-    background-size: auto auto;
-    background-position-x: right -300px;
-    padding-top: 60px;
+  .we-can-help .the-boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.we-can-help .the-boxes .the-box {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  margin-bottom: 60px;
+}
+
+@media only screen and (min-width: 768px) {
+  .we-can-help .the-boxes .the-box {
+    margin-bottom: 0px;
+    width: 30%;
+    max-width: 500px;
+    padding: 40px;
     padding-bottom: 60px;
   }
 }
 
-.home-aboutus h2 {
-  margin-top: 0;
-  text-align: left;
-  line-height: 40px;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-aboutus h2 {
-    margin-bottom: 40px;
-  }
-}
-
-.home-aboutus h2 span {
-  display: block;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-aboutus h2 span {
-    font-size: 24px;
-  }
-}
-
-.home-aboutus p a {
-  text-decoration: underline;
-  color: #1a1a1a;
-}
-
-.home-aboutus .button {
-  margin-top: 20px;
-}
-
-/*===================================
-=            home-doctor            =
-===================================*/
-.home-doctor {
-  background: #000000;
-  color: #ffffff;
-  text-align: left;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-doctor {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 85px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .home-doctor > div {
-    width: 50%;
-  }
-}
-
-.home-doctor .doc-image {
-  background-position: center;
-  background-size: cover;
-  min-height: 300px;
-}
-
-.home-doctor .doc-content {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-doctor .doc-content {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin: 0 auto;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-doctor .doc-content {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
-
-.home-doctor .doc-content h2, .home-doctor .doc-content p {
-  max-width: 600px;
-}
-
-.home-doctor h2 {
-  display: block;
-  width: 100%;
-  margin-top: 0;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-doctor h2 {
-    margin-bottom: 20px;
-  }
-}
-
-.home-doctor h2 span {
-  display: block;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-doctor h2 span {
-    font-size: 24px;
-  }
-}
-
-.home-doctor .button {
-  margin-top: 20px;
-  margin-left: 0;
-}
-
-/*================================================
-=            home-featured-procedures            =
-================================================*/
-.home-featured-procedures {
-  color: #ffffff;
-  background: #000000;
-  position: relative;
-}
-
-.home-featured-procedures .the-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-@media only screen and (min-width: 768px) {
-  .home-featured-procedures .the-overlay {
-    display: none;
-  }
-}
-
-.home-featured-procedures .the-procedure {
-  background-position: center center;
-  background-repeat: no-repeat;
-  text-align: left;
-  padding: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-featured-procedures .the-procedure {
-    padding: auto;
-  }
-}
-
-@media only screen and (min-width: 1660px) {
-  .home-featured-procedures .the-procedure {
-    background-size: cover;
-    background-position: bottom center;
-  }
-}
-
-.home-featured-procedures .the-procedure:nth-of-type(1) {
-  padding-top: 100px;
-  background-position: center center;
-  background-position-x: right -200px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-featured-procedures .the-procedure:nth-of-type(1) {
-    background-position: center center;
-    height: 932px;
-    padding-left: 40px;
-    padding-top: 250px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-featured-procedures .the-procedure:nth-of-type(1) {
-    padding-left: 15vw;
-  }
-}
-
-.home-featured-procedures .the-procedure:nth-of-type(2) {
-  text-align: left;
-  height: 400px;
-  background-position: center center;
-  background-position-x: left -300px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-featured-procedures .the-procedure:nth-of-type(2) {
-    background-position: center center;
-    height: 965px;
-    padding-left: 55vw !important;
-    padding-top: 250px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-featured-procedures .the-procedure:nth-of-type(2) {
-    padding-left: 60vw !important;
-  }
-}
-
-.home-featured-procedures .the-procedure:nth-of-type(3) {
-  height: 500px;
-  background-position: right;
-  background-position-x: right -100px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-featured-procedures .the-procedure:nth-of-type(3) {
-    height: 831px;
-    padding-left: 40px;
-    padding-top: 200px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-featured-procedures .the-procedure:nth-of-type(3) {
-    background-position: center center;
-    padding-left: 15vw;
-  }
-}
-
-.home-featured-procedures h2 {
-  margin: 0;
-  font-family: "Playfair Display", serif;
-  z-index: 3 !important;
-  position: relative;
-}
-
-.home-featured-procedures a {
-  display: block;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-bottom: 1px solid #4d4d4d;
-}
-
-.home-featured-procedures a:hover {
+.we-can-help .the-boxes .button {
   background: #ffffff;
-  color: #000000;
-}
-
-.home-featured-procedures a:hover a {
-  color: #000000;
-}
-
-.home-featured-procedures ul {
-  z-index: 3 !important;
-  position: relative;
-  list-style: none;
-  text-align: left;
 }
 
 @media only screen and (min-width: 768px) {
-  .home-featured-procedures ul {
-    max-width: 330px;
+  .we-can-help .the-boxes .button {
+    position: absolute;
+    bottom: -20px;
+    right: calc( 50% - 130px);
+    width: 260px;
+    border-left: 30px solid #000000;
+    border-right: 30px solid #000000;
   }
 }
 
-/*================================================
-=            surgery-through-the-ages            =
-================================================*/
-.surgery-through-the-ages {
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-@media only screen and (min-width: 768px) {
-  .surgery-through-the-ages {
-    height: 790px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .surgery-through-the-ages {
-    height: 790px;
-  }
-}
-
-.surgery-through-the-ages .specialty-info {
-  position: absolute;
-  max-width: 350px;
-  right: calc(50% - 500px);
-  top: 120px;
-  text-align: left;
-  opacity: 0;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
-}
-
-.surgery-through-the-ages .specialty-info.active-info {
-  opacity: 1;
-}
-
-.surgery-through-the-ages .specialty-ages {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: 190px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: rgba(0, 0, 0, 0.8);
-  color: #ffffff;
-  font-size: 27px;
-}
-
-.surgery-through-the-ages .specialty-ages > div {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.surgery-through-the-ages .specialty-ages > div:hover, .surgery-through-the-ages .specialty-ages > div .active-tab {
-  background: #ffffff;
+.we-can-help .the-boxes .button:hover {
   color: #000000;
-}
-
-.surgery-through-the-ages .specialty-ages > div.active-ages {
-  color: #000000;
-  background: #ffffff;
-  position: relative;
-}
-
-.surgery-through-the-ages .specialty-ages > div.active-ages:before {
-  content: '';
-  top: -60px;
-  left: calc(50% - 30px);
-  position: absolute;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid white;
 }
 
 /* ------------------------

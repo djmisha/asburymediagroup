@@ -9,8 +9,8 @@
 	<title><?php wp_title(""); ?></title>
 
 	<?php if(!is_404()): ?>
-		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Playfair+Display:400,400i,700i' ); ?>
-	<?php endif; ?>
+		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700|Playfair+Display:400,400i,700i' ); ?>
+	<?php endif; ?> 
 	<?php wp_head()?>
 
 
@@ -20,7 +20,6 @@
 
 <a href="#skiptomaincontent" style="display:none;">Skip to main content</a>
 
-<!-- <header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header will-parallax parallax-internal-header b-lazy'; ?>" <?php get__header__image(); ?> > -->
 <header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header will-parallax parallax-internal-header'; ?>" <?php get__header__image(); ?> >
 
 	<div class="nav-bar">
@@ -57,6 +56,8 @@
 		</div>
 	</div>
 
+			<!-- <h1>San Diego Web Design</h1> -->
+	
 	
 
 </header>

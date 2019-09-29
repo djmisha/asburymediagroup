@@ -1,7 +1,8 @@
 
 <footer>
-	<section class="upper-footer footer-parallax will-parallax parallax-welcome">
-	<!-- <section class="upper-footer footer-parallax will-parallax parallax-welcome b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg"> -->
+	<!-- <section class="upper-footer footer-parallax will-parallax parallax-welcome"> -->
+	<section class="upper-footer footer-parallax will-parallax parallax-welcome b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-contact.jpg">
+		<div class="overlay"></div>
 		<span class="the-headline">Request a Consultation</span>
 		<div class="footer-form">
 			<?php echo do_shortcode('[seaforms name="contact-us"]'); ?>
@@ -44,12 +45,10 @@
 	</section>
 
 	<section class="lower-footer">
+		<div class="schema-markup"><?php do_action('reviews_markup'); ?></div>
 		<div class="copyright">Copyright &copy; <?=date("Y")?> <?php bloginfo('title');?><br> All rights reserved | <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a> | Made with &hearts; in Mission Beach 
 		</div>
-		
 	</section>
-
-	
 
 </footer>
 
